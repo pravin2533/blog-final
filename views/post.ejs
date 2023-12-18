@@ -1,0 +1,7 @@
+<%- include("partials/header") %>
+<% array.forEach(function(element){ %>
+  <h1><%= element.tit%> </h1>
+  <p><%=element.composecontent.substring(0,100) +"..." %><a href="posts/user">read more</a></p>
+
+<% }) %>
+<%- include("partials/footer") %>

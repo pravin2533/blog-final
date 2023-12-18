@@ -1,0 +1,150 @@
+<!-- views/about.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Daily Journal</title>
+     <%- include("partials/header.ejs") %> 
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            /* background: #f7f7f7; */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            /* background: #fff; */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #b81010;
+            padding-bottom: 2.5%;
+        }
+
+        h2, h3 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+            font-size:2.5vh !important;
+        }
+
+        section {
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .section1 {
+            /* background: #f5e1e6; */
+            padding: 2px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+
+        .section2 {
+            background: #fdfdfd;
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        .social-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-link:hover {
+            text-decoration: underline;
+        }
+        
+        h2
+        {
+            font-size:6.5vh !important;
+        }
+        h3
+        {
+            font-size:4.5vh !important;
+        }
+        @media (max-width: 767px) {
+            p,li
+            {
+                font-size:2vh !important;
+            }
+            .container
+            {
+                padding-left:5% !important;
+                padding-right:5% !important;
+            }
+            h1
+            {
+               
+                font-weight: 400 !important;
+            }
+         
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="section1 container">
+        <h1 class="main" style="font-size:7vh !important" >Welcome to Daily Journal</h1>
+
+        <h2>About Daily Journal</h2>
+
+        <p style="font-size:3vh;">Hello and welcome to Daily Journal! I'm Pravin Pawar, and I'm thrilled to have you here as part of our community.</p>
+
+        <h3>About Me</h3>
+
+        <p style="font-size:3vh;">I have always believed in the power of daily reflection and the impact it can have on personal growth and well-being. Daily Journal is not just a blog; it's a space where I share my thoughts, experiences, and insights on life's journey.</p>
+
+       
+    </section>
+
+    <section class="section2 container">
+        <h3 style="padding-top:3vh !important;">What to Expect</h3>
+        <ul>
+            <li><strong>Daily Reflections:</strong> Each day, I embark on a journey of self-discovery and share my reflections with you. From the ordinary to the extraordinary, I believe that every day offers a lesson, a moment of gratitude, or a chance to learn something new.</li>
+            <li><strong>Inspiration and Motivation:</strong> Daily Journal is a source of inspiration and motivation. Whether you're looking for practical tips on self-improvement, stories of resilience, or simply a daily dose of positivity, you'll find it here.</li>
+            <li><strong>Community and Connection:</strong> This blog is not just about my experiences—it's about building a community of like-minded individuals who appreciate the beauty of daily reflection. I encourage you to share your thoughts, insights, and daily moments in the comments. Let's learn and grow together.</li>
+        </ul>
+
+        <h3 style="padding-top:4vh;">Connect With Daily Journal</h3>
+
+        <p style="font-size:3vh;">Join the Daily Journal community on <a href="https://twitter.com/" class="social-link">Twitter</a>, <a href="https://facebook.com/" class="social-link">Facebook</a>, and <a href="https://instagram.com/" class="social-link">Instagram</a> to stay updated on the latest reflections, engage in discussions, and connect with fellow readers.</p>
+
+        <p style="font-size:3vh;">Thank you for being part of Daily Journal. I look forward to sharing this journey with you, one day at a time.</p>
+
+        <p style="font-size:3vh;">Warm regards,</p>
+
+        <p style="font-size:3vh;">Pravin Pawar</p>
+    </section>
+
+    <%- include("partials/footer.ejs") %>
+
+</body>
+</html>

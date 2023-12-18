@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your website description">
+    <meta name="keywords" content="keywords, separated, by, commas">
+    <meta name="author" content="Your Name">
+
+    <!-- Normalize CSS for consistent default styles across browsers -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-dT5GcS1K3O1QqrJ2TWXJUt/MR7dZa21M20Nt3TzEfKJlVlKQWFhT/D8L2s9TiKYuqw/6Wds6BBWXkFb7rgTj5Og==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styles */
+
+        /* Navbar Styles */
+        .navbar {
+            border-radius: 0vh;
+            width: 100%;
+            height:15vh;
+            position:fixed !important;
+            z-index: 1000;
+            box-shadow: 0vh 2vh 5vh rgba(0, 0, 0, 0.1);
+            border-bottom: 0.5vh solid #333;
+            background-color: #333;
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            padding: 0 2vh;
+            padding-top: 3vh;
+            font-weight: 600 !important;
+            font-size:5vh !important;
+            text-align: center;
+        }
+
+        .navbar-nav a.dj-link {
+            color: #ffcc00 !important;
+            font-weight: 5vh;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-nav a.dj-link:hover {
+            color: #fff !important;
+        }
+
+        span a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            font-size:3.5vh;
+            padding-left: 2vh;
+            font-weight: 5vh;
+        }
+
+        .search-button {
+            width: 70vh !important;
+            height: 3.5vh;
+            padding-top:1vh !important;
+            border-radius: 5vh;
+            padding-left:30vh !important;
+        }
+        .secondnav
+        {
+            padding-left:95vh;
+            padding-top:3vh !important;
+        }
+
+    
+
+ 
+        
+    
+        @media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 4vh !important;
+        
+    }
+
+    p,li
+    {
+        font-size:1.5vh;
+    }
+
+    span a {
+        font-size: 2vh;
+        padding-bottom:2vh !important;
+    }
+
+    .search-button {
+        width: 100%;
+        height:10vh !important;
+        padding-right: 8vh !important;
+    
+    }
+    .secondnav
+    {
+        padding-left:1vh;
+    }
+    
+ 
+
+   
+}
+
+  
+    
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+</head>
+
+
+
+<body>
+<header  style="padding-bottom:15vh !important">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">DAILY JOURNAL</a>
+       
+        <button class="navbar-toggler btn-outline-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+       
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div class="secondnav ml-auto" >
+                <span id="home"><a href="/" class="dj-link">HOME</a></span>
+                <span id="about"><a href="/about" class="dj-link">ABOUT</a></span>
+                <span id="contact"><a href="/contact" class="dj-link">CONTACT</a></span>
+                <span id="compose"><a href="/compose" class="dj-link">COMPOSE</a></span>
+            </div>
+        </div>
+        </div>
+      </div>
+      </nav>
+    </header>
+      </body>
+      </html>
+      
+

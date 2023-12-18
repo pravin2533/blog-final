@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your website description">
+    <meta name="keywords" content="keywords, separated, by, commas">
+    <meta name="author" content="Your Name">
+
+    <!-- Normalize CSS for consistent default styles across browsers -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-dT5GcS1K3O1QqrJ2TWXJUt/MR7dZa21M20Nt3TzEfKJlVlKQWFhT/D8L2s9TiKYuqw/6Wds6BBWXkFb7rgTj5Og==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+
+
+        /* Navbar Styles */
+        .navbar {
+            border-radius: 0vh;
+            width: 100%;
+            height:15vh;
+            position:fixed !important;
+            z-index: 1000;
+            box-shadow: 0vh 2vh 5vh rgba(0, 0, 0, 0.1);
+            border-bottom: 0.5vh solid #333;
+            background-color: #333;
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            padding: 0 2vh;
+            padding-top: 3vh;
+            font-weight: 600;
+            font-size:5vh;
+            text-align: center;
+        }
+
+        .navbar-nav a.dj-link {
+            color: #ffcc00 !important;
+            font-weight: 5vh;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-nav a.dj-link:hover {
+            color: #fff !important;
+        }
+
+        span a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            font-size:3vh;
+            padding-left: 2vh;
+            font-weight: 5vh;
+        }
+
+        .search-button {
+            width: 70vh !important;
+            height: 3.5vh;
+            padding-top:1vh !important;
+            border-radius: 5vh;
+            padding-left:30vh !important;
+        }
+        .secondnav
+        {
+            padding-left:25vh !important;
+            padding-top:3vh !important;
+        }
+
+        nav .container {
+            border-bottom: 1vh solid #e8e0e4;
+            box-shadow: 0vh 2vh 5vh rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            background-color: #e8e0e4;
+            border-radius: 2vh;
+        }
+        nav
+        {
+            margin-bottom:10vh !important
+        }
+
+        .input-group {
+            display: flex;
+        }
+
+        .form-control {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .btn {
+            border-radius: 5vh;
+        }
+
+        /* Section 1 Styles */
+        .section1 {
+            background-color: #fdfdfd;
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding-left: 5vh;
+            padding-right: 5vh;
+            padding-top:20%;
+            box-shadow: 0vh 2vh 5vh rgba(0, 0, 0, 0.1);
+            border-bottom: 0.005vh solid black;
+        }
+
+        .section1 h1 {
+           
+            padding-top: 10vh;
+            margin-top: 0;
+            margin-bottom: 2vh;
+            font-weight: 2vh;
+            line-height: 1.5;
+            color: #333;
+        }
+        .div1 h1
+        {
+            font-size:2vh;
+        }
+
+        .section1 .btn-compose {
+            background-color: #294861;
+            color: #fff;
+            border: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .section1 .btn-compose:hover {
+            background-color: #555;
+        }
+
+        /* Section 2 Styles */
+        .section2 {
+            background-image: linear-gradient(rgb(237, 186, 194), rgb(132, 132, 148));
+            width:100%;
+            height:70vh;
+        }
+
+        .recent-blogs h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width:40vh;
+            height:50vh;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 12.5%;
+        }
+        .card-footer
+        {
+            padding:6%;
+            
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-text {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #333;
+            border: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+   
+        .btn-primary:hover {
+            background-color: #555;
+        }
+
+        .carousel {
+            width: 100%;
+            height: 70%;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            align-items: center;
+            justify-content: center;
+            padding-left: 70vh;
+            padding-right:30vh;
+        }
+
+        .footer span {
+            padding-left: 20%;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: underline;
+            padding: 0 5px;
+        }
+
+        /* Blog Types Section Styles */
+        .blog-types-section {
+            padding-top: 10%;
+            padding-bottom: 10%;
+            display: flex;
+            overflow: hidden;
+            margin: 0;
+            padding: 3% 15% 0;
+            background-color: #e8e0e4;
+        }
+
+        .scrollable-half {
+            width: 50%;
+            overflow-y: auto;
+            max-height: 400px;
+            font-size: 3.5vh;
+            background-color: #e8e0e4;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-specifications {
+            width: 50%;
+            padding-left: 5vh;
+            font-size: 3.5vh;
+            background-color: #e8e0e4;
+        }
+
+        .blog-types-section h2 {
+            text-align: center;
+        }
+
+        .div1 {
+            padding-bottom: 15%;
+        }
+
+        .div1 h1 {
+            font-size: 15px;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+
+        .fixed-navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        /* Add a class for the fixed navigation */
+        .fixed-nav-padding {
+            padding-top: 60px; /* Adjust this value based on the height of your navigation */
+        }
+
+        .scrollable-container {
+            padding-top: 7%;
+            padding-right:5%;
+            width: 100%;
+            overflow-x: auto;
+            display: flex;
+            background-color: aliceblue;
+        }
+
+        .scrollable-item {
+            flex: 0 0 auto;
+            padding-right:5%;
+            margin-right: 1.5%; /* Adjust margin as needed */
+            margin-left: 2px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 4vh;
+        padding-top: 2vh;
+    }
+
+    .navbar-nav a.dj-link {
+        font-size: 3vh;
+    }
+    p,li
+    {
+        font-size:1.5vh;
+    }
+
+    span a {
+        font-size: 2vh !important;
+    }
+
+    .search-button {
+        width: 100%;
+        height:10vh !important;
+        padding-right: 8vh !important;
+    
+    }
+    .secondnav
+    {
+        padding-top:1vh !important;
+        padding-right:10vh !important;
+    }
+    
+    .section1 h1 {
+        padding-top: 8vh;
+        font-size: 2.5vh !important;
+    }
+
+    .div1 h1 {
+        font-size: 1.5vh;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .card {
+        width: 100%;
+    }
+    .recent-blogs p
+    {
+        font-size:3vh !important;
+    }
+    .footer p
+    {
+        font-size:2vh !important;
+    }
+
+    .footer {
+        padding-left: 10vh;
+        padding-right: 10vh;
+    }
+}
+
+     
+        .readmore
+        {
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+</head>
+
+
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">DAILY JOURNAL</a>
+       
+        <button class="navbar-toggler btn-outline-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+       
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div class="search-button">
+                <form action="/posts" method="get">
+                    <div class="input-group">
+                        <input style="border-radius: 50px;" type="text" class="form-control" name="q" placeholder="Search">
+                        <button type="submit" class="btn btn-outline-primary">Search</button>
+                    </div>
+                </form>
+            </div>
+            <div class="secondnav ml-auto" >
+                <span id="home"><a href="/" class="dj-link">HOME</a></span>
+                <span id="about"><a href="/about" class="dj-link">ABOUT</a></span>
+                <span id="contact"><a href="/contact" class="dj-link">CONTACT</a></span>
+                <span id="compose"><a href="/compose" class="dj-link">COMPOSE</a></span>
+            </div>
+        </div>
+        </div>
+      </div>
+      </nav>
+    </header>
+    <!-- Section 1 -->
+    <section class="section1">
+        <div class="div1">
+            <h1 style="font-size:3.5vh;">Embark on a Journey of Words: Unleash Your Creativity, Share Your Passion. Your Stories Deserve a
+                Platform – Welcome to a World Where Every Word Matters. Start Writing, Inspire the World!</h1>
+            <a href="/compose" class="btn btn-primary btn-compose" style="font-size:3.5vh;">Compose</a>
+        </div>
+        <div class="row">
+            <div col-6>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2 (Recent Blogs) -->
+<div class="scrollable-container">
+    <div class="scrollable-item">
+        <img src="images/nature1.avif" alt="Image 1">
+        <h5>Nature's Symphony:</h5>
+        <p>"Immerse yourself in the harmonies of the <br>natural world."</p>
+    </div>
+    <div class="scrollable-item">
+        <img src="images/nature2.avif" alt="Image 2">
+        <h5>Eco Explorations:</h5>
+        <p>"Embark on eco-friendly adventures that celebrate the <br>wonders of nature."</p>
+    </div>
+    <div class="scrollable-item">
+        <img src="images/nature3.avif" alt="Image 2">
+        <h5>Coastal Chronicles:</h5>
+        <p> "Journey along the coastlines and explore the <br>ever-changing stories of the sea."</p>
+    </div>
+  
+    <div class="scrollable-item">
+        <img src="images/food2.avif" alt="Image 2">
+        <h5>Flavorful Adventures Await</h5>
+        <p>"Discover a world of bold flavors and culinary <br>delights with us."</p>
+    </div>
+    <div class="scrollable-item">
+        <img src="images/food3.avif" alt="Image 2">
+        <h5>Tasty Thrift</h5>
+        <p>"Big on flavor, easy on the wallet – join our tasty <br>thrift revolution."</p></p>
+    </div>
+    <div class="scrollable-item">
+        <img src="images/food4.avif" alt="Image 2">
+        <h5>Seasonal Eats, Year-Round Joy:</h5>
+        <p> "Joyful celebrations of seasonal ingredients,<br> all year long."</p>
+    </div>
+    <!-- Add more images as needed -->
+</div>
+    <!-- Recent Blogs -->
+    <section class="section2">
+        <div class="container recent-blogs">
+            <h2>Recent Blogs</h2>
+            <div class="row" id="recentBlogsContainer">
+                <% blogposts.forEach(function(element) {%>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title" style="font-size:4vh;"><%=element.title%></h3>
+                            <p class="card-text" style="font-size:4vh;padding-bottom:3vh;"><%=element.content.substring(0, 50)%>...</p>
+                            <div class="card-footer">
+                                <a href="/posts/<%= element.title %>" class="btn btn-primary readmore" style="font-size:3vh;">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%});%>
+            </div>
+        </div>
+        
+
+        <!-- Blog Types Section -->
+        <div class="blog-types-section">
+            <div class="scrollable-half">
+                <h2 style="padding-top:3vh;padding-bottom:3vh;">Blog Types</h2>
+                <p>1. Personal Blogs</p>
+                <p>2. Travel Blogs</p>
+                <p>3. Food Blogs</p>
+                <p>4. Fashion Blogs</p>
+                <p>5. Technology Blogs</p>
+                <p>6. Health and Fitness Blogs</p>
+                <p>7. DIY Blogs</p>
+                <p>8. Business Blogs</p>
+                <p>9. Education Blogs</p>
+                <p>10. Science Blogs</p>
+                <p>11. Political Blogs</p>
+                <p>12. Lifestyle Blogs</p>
+                <p>13. Parenting Blogs</p>
+                <p>14. Photography Blogs</p>
+                <p>15. Review Blogs</p>
+                <p>16. Guest Blogs</p>
+                <p>17. Music Blogs</p>
+                <p>18. Art Blogs</p>
+                <p>19. Fitness Blogs</p>
+                <p>20. Social Media Blogs</p>
+            </div>
+            <div class="blog-specifications">
+                <h2 style="padding-top:3vh;padding-bottom:3vh;">Blog Specifications</h2>
+                <p>Each blog type has its unique style and audience. Consider the following specifications:</p>
+                <ul>
+                    <li><strong>Personal Blogs:</strong> Share personal experiences, thoughts, and opinions.</li>
+                    <li><strong>Travel Blogs:</strong> Explore and document travel adventures with tips and recommendations.</li>
+                    <li><strong>Food Blogs:</strong> Feature recipes, food experiences, and culinary delights.</li>
+                    <li><strong>Fashion Blogs:</strong> Showcase fashion trends, styles, and personal fashion journeys.</li>
+                    <li><strong>Technology Blogs:</strong> Cover tech news, reviews, and tutorials.</li>
+                    <!-- Add specifications for other blog types -->
+                </ul>
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p style="font-size:4vh;">&copy; 2023 DAILY JOURNAL. All Rights Reserved.</p>
+        <span><a href="/term">Terms & Conditions</a> | <a href="/help">Help</a></span>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var toggleButton = document.querySelector(".navbar-toggler-icon");
+            var nav = document.querySelector(".navbar"); 
+        
+            
+            toggleButton.addEventListener("click", function () {
+                
+                console.log("button is triggered");
+                nav.style.height = "30vh";
+              
+            });
+           
+        });
+    </script>
+    
+    
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@2.10.2/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-o8I9aNBso1zFVAh1oZZ12n8KCszJs/YLe3eK5jgudzdo0M/EypHapDq1f5I2CqFci" crossorigin="anonymous"></script>
+</body>
+</html>
+
